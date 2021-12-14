@@ -1,0 +1,37 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+span {
+  font-family: 'Bungee', sans-serif;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  font-size: 40px;
+  display: flex;
+  align-items: flex-end;
+  
+}
+
+.rightcontent {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+
+}
+
+.writetweet {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.fa-solid {
+  align-self: center;
+  color: red
+}
