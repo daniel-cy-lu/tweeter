@@ -18,6 +18,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  
 }
 
 /*
@@ -25,8 +26,15 @@ body {
  */
  body {
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
  }
 
 main {
   width: 90%;
+  background-color: #f4f1ec;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
