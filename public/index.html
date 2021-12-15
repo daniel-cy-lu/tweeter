@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    
+    <link rel="stylesheet" href="/styles/old-tweet.css" type="text/css" />
     
     
 
@@ -44,7 +44,7 @@
       </div>
     </nav>
     <!-- Header including Avatar-->
-    <header>
+    <header class="avatar-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -68,10 +68,27 @@
           </div>
         </form>
       </section>
+      <br>
       <section class ="old-tweet">
         <article>
-          <header>Old Tweet Header</header>
-          <footer>Old Tweet Footer</footer>
+          <header class="old-tweet-header">
+            <div class ='old-tweet-header-left-content'>
+              <div>avatar</div>
+              <div>user name</div>
+            </div>
+            <div class ="old-tweet-header-right-content">user id</div>
+          </header>
+          <br>
+          <div>Old Tweet</div>  
+          <br>
+          <footer class="old-tweet-footer">
+            <div>Date</div>
+            <div class = "old-tweet-footer-icons">
+              <div><i class="fa-solid fa-flag"></i></div>
+              <div><i class="fa-solid fa-retweet"></i></div>
+              <div><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </footer>
         </article>
       </section>
     </main>

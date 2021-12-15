@@ -43,7 +43,8 @@ body {
   width:90%
 }
 
-.old-tweet {
-  border: black;
-  
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
 }
+
