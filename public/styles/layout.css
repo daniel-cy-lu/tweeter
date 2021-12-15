@@ -30,11 +30,20 @@ body {
   flex-direction: column;
  }
 
-main {
+.contatiner {
   width: 90%;
   background-color: #f4f1ec;
   align-self: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.chat-area {
+  width:90%
+}
+
+.old-tweet {
+  border: black;
+  
 }
