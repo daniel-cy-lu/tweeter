@@ -22,6 +22,11 @@
 
 .old-tweet-header-left-content {
   display: flex;
+  gap: 10px;
+}
+
+.old-tweet-text {
+  border-bottom: 2px solid black;
 }
 
 .old-tweet-footer {
@@ -32,6 +37,7 @@
 .old-tweet-footer-icons {
   display: flex;
   color: black;
+  gap: 10px;
 }
 
 .fa-flag:hover {

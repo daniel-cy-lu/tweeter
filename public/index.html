@@ -60,8 +60,8 @@
         <br>
         <form method="POST" action="/tweets" class="chat-area">
           <label for="tweet-text">What are you humming about?</label>
-          <!-- <textarea name="text" id="tweet-text"></textarea> -->
-          <textarea name="the-textarea" id="the-textarea" placeholder="Start Typin..."autofocus></textarea>
+          <br>
+          <textarea name="the-textarea" id="the-textarea" placeholder="Start Typin..."></textarea>
           <div class="bottom-chat-area">
             <button type="submit">Tweet</button>
             <output id="remaining" for="tweet-text">140</output>
@@ -79,7 +79,7 @@
             <div class ="old-tweet-header-right-content">user id</div>
           </header>
           <br>
-          <div>Old Tweet</div>  
+          <div class="old-tweet-text">Old Tweet</div>  
           <br>
           <footer class="old-tweet-footer">
             <div>Date</div>
@@ -92,6 +92,7 @@
         </article>
       </section>
     </main>
+    
     <script src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
