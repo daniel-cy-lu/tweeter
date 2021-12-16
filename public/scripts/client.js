@@ -84,13 +84,14 @@ $(() => {
     
     const $message = $("textarea").val();
     const $errorSign = $('<i>').addClass("fas fa-exclamation-triangle");
+    $('.error-message').empty();
     if ($message === null || $message === ""){
       const $errorText1 = $('<div>').text("Error: Please enter a tweet!");
-      $(".error-message").append($errorSign, $errorText1).hide(15000);
+      $(".error-message").append($errorSign, $errorText1).slideDown(2000).slideUp(4000);
     }
     else if ($message.length > 140){
       const $errorText2 = $('<div>').text("Error: Your tweet is more than 140 letters!");
-      $(".error-message").append($errorSign, $errorText2).hide(15000);
+      $(".error-message").append($errorSign, $errorText2).slideDown(2000).slideUp(4000);
     }
     else {
       $.post('/tweets', serializeData, (response) => {

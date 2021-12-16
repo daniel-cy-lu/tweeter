@@ -24,3 +24,12 @@
 .error-message {
   color: red;
 }
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+button:hover {
+  box-shadow: 3.5px 7px #966c00;;
+}
