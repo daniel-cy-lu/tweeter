@@ -78,11 +78,23 @@ $(() => {
 
   $form.on('submit', function(event) {
     event.preventDefault();
-    console.log(this)
     const serializeData = $(this).serialize();
-    $.post('/tweets', serializeData, (response) => {
-      loadTweets()
-    })
+    
+    const $message = $("textarea").val()
+    if ($message === null || $message === ""){
+      $(".error-message").text("Please enter a tweet!").slideDown(400).slideUp(5000);
+    }
+    else if ($message.length > 140){
+      $(".error-message").text("Your tweet has more than 140 letters!").slideDown(400).slideUp(5000);
+    }
+    else {
+      $.post('/tweets', serializeData, (response) => {
+        loadTweets()
+      })
+    }
+    
+    
+    
   })
 
 })
