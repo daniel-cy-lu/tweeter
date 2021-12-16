@@ -21,3 +21,6 @@
   padding-top: 10px;
 }
 
+.error-message {
+  color: red;
+}

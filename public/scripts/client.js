@@ -82,12 +82,15 @@ $(() => {
     event.preventDefault();
     const serializeData = $(this).serialize();
     
-    const $message = $("textarea").val()
+    const $message = $("textarea").val();
+    const $errorSign = $('<i>').addClass("fas fa-exclamation-triangle");
     if ($message === null || $message === ""){
-      $(".error-message").text("Please enter a tweet!").slideDown(400).slideUp(5000);
+      const $errorText1 = $('<div>').text("Error: Please enter a tweet!");
+      $(".error-message").append($errorSign, $errorText1).hide(15000);
     }
     else if ($message.length > 140){
-      $(".error-message").text("Your tweet has more than 140 letters!").slideDown(400).slideUp(5000);
+      const $errorText2 = $('<div>').text("Error: Your tweet is more than 140 letters!");
+      $(".error-message").append($errorSign, $errorText2).hide(15000);
     }
     else {
       $.post('/tweets', serializeData, (response) => {
