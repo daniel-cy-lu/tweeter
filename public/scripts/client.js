@@ -55,11 +55,13 @@ $(() => {
     const $flag = $('<i>').addClass('fa-solid fa-flag');
     const $retweet = $('<i>').addClass('fa-solid fa-retweet');
     const $heart = $('<i>').addClass('fa-solid fa-heart');
-    const $icon = $('<div>').append($flag, $retweet, $heart);
+    const $icon = $('<div>').addClass('old-tweet-footer-icons');
+    $icon.append($flag, $retweet, $heart);
     const $footer = $('<footer>').addClass("old-tweet-footer");
     
     $footer.append($date, $icon);
-    const $oldTweet = $('<article>').append($header, $text, $footer); 
+    const $oldTweet = $('<article>').addClass('old-tweet-article')
+    $oldTweet.append($header, $text, $footer); 
     
     return $oldTweet;
   }

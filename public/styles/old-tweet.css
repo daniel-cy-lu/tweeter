@@ -1,4 +1,12 @@
 .old-tweet {
+  padding-bottom: 20px;
+  display:flex;
+  flex-direction: column;
+  gap: 18px;
+  
+}
+
+.old-tweet-article {
   border: 2px solid black;
   padding: 10px 20px;
   margin-left: 5em;
@@ -10,8 +18,8 @@
   
 }
 
-.old-tweet:hover {
-  box-shadow: 5px 10px #888888;
+.old-tweet-article:hover {
+  box-shadow: 5px 10px #966c00;
 }
 
 
@@ -32,11 +40,12 @@
 .old-tweet-footer {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .old-tweet-footer-icons {
   display: flex;
-  color: black;
+  color: #4056A1;
   gap: 10px;
 }
 
