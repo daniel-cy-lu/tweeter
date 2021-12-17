@@ -1,3 +1,4 @@
+/* Old tweets article CSS */
 .old-tweet {
   padding-bottom: 20px;
   display:flex;
@@ -8,7 +9,7 @@
 
 .old-tweet-article {
   border: 2px solid black;
-  padding: 10px 20px;
+  padding: 0.5em 1em;
   margin-left: 5em;
   margin-right: 5em;
 

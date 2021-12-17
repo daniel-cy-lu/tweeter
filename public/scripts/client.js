@@ -90,6 +90,7 @@ $(() => {
     const $message = $("textarea").val();
     const $errorSign = $('<i>').addClass("fas fa-exclamation-triangle");
     $('.error-message').empty();
+    $('textarea').val = '';
     if ($message === null || $message === "") {
       const $errorText1 = $('<div>').text("Error: Please enter a tweet!");
       $(".error-message").append($errorSign, $errorText1).slideDown(2500).slideUp(4000);

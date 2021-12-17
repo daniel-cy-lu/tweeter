@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Restart Browser -->
-    <button onClick="window.location.reload();">Refresh Page</button>
-
     <!-- Disable Viewport Zooming -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     
@@ -42,6 +39,7 @@
   </head>
 
   <body>
+    
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
@@ -50,7 +48,11 @@
         <div class="writetweet"><b>Write</b> a new tweet</div>
       </div>
     </nav>
-    <div><!-- Header including Avatar-->
+    
+    <!-- Div container for Header and Main-->
+    <div>
+      
+      <!-- Header including Avatar and My Name-->
       <header class="avatar-header">
         <div>
           <img src="/images/profile-hex.png"> 
@@ -60,13 +62,15 @@
           <h2>Daniel Lu</h2>
         </div>
       </header>
-    <!-- Page-specific (main) content here -->
+      
+      <!-- Page-specific (main) content here -->
       <main class="container">
+        
+        <!-- Section contatiner for New Tweets-->
         <section class="new-tweet">
         <br>
         <form class="chat-area">
           <label for="tweet-text" >What are you humming about?</label>
-        
           <div class = "error-message"></div>
           <br>
           <textarea name="text" id="the-textarea" placeholder="Start Tweeting..."></textarea>
@@ -75,17 +79,16 @@
             <output id="remaining" for="tweet-text">140</output>
           </div>
         </form>
-        
       </section>
       <br>
+     
+      <!-- Section container to hold Articles of Old Tweets see renderTweets() in client.js -->
       <section class ="old-tweet">
-      
       </section>
     </main>
     </div>
     
-    
-    
+    <!-- JS scripts-->
     <script src="/scripts/composer-char-counter.js"></script>
     <script src="/scripts/client.js"></script>
   </body>
