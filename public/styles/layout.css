@@ -28,20 +28,17 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
  }
 
-.contatiner {
-  width: 90%;
+.container {
   background-color: #f4f1ec;
-  align-self: center;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.chat-area {
-  width:90%
-}
+
 
 
 

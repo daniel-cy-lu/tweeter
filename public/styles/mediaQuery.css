@@ -1,0 +1,22 @@
+/* Desktop Style */
+
+@media only screen and (min-width: 1024px) {
+ 
+  body {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .avatar-header {
+    width: 33%;
+   float:left
+  }
+  .container{
+   width: 66%;
+   float: right;
+  } 
+
+
+ 
+};
