@@ -4,8 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+// Execute after DOM are ready
 $(() => {
   
+  // Function that GET old tweets from /tweets
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -15,16 +18,16 @@ $(() => {
         renderTweets(tweets);
       },
       error: (err) => {
-        console.log(`error: ${err}`)
-      } 
+        console.log(`error: ${err}`);
+      }
     });
   };
-
   loadTweets();
 
-  var createTweetElement = function (tweetData) {
+  // Function that generate a article container that holds old tweet info and DOM
+  const createTweetElement = function(tweetData) {
     const $avatar = $('<img>').attr("src", tweetData.user.avatars);
-    const $avatarImg = $('<div>').addClass('old-tweet-header-left-content-avatar')
+    const $avatarImg = $('<div>').addClass('old-tweet-header-left-content-avatar');
     $avatarImg.append($avatar);
   
   
@@ -37,10 +40,10 @@ $(() => {
   
   
     const $leftContent = $('<div>').addClass('old-tweet-header-left-content');
-    $leftContent.append($avatarImg, $username); 
+    $leftContent.append($avatarImg, $username);
   
   
-    const $header= $('<header>').addClass("old-tweet-header");
+    const $header = $('<header>').addClass("old-tweet-header");
     $header.append($leftContent, $handle);
   
   
@@ -60,13 +63,14 @@ $(() => {
     const $footer = $('<footer>').addClass("old-tweet-footer");
     
     $footer.append($date, $icon);
-    const $oldTweet = $('<article>').addClass('old-tweet-article')
-    $oldTweet.append($header, $text, $footer); 
+    const $oldTweet = $('<article>').addClass('old-tweet-article');
+    $oldTweet.append($header, $text, $footer);
     
     return $oldTweet;
-  }
+  };
 
-  var renderTweets = function (tweetDatas) {
+  // Function that append each article fomr createTweetElement to container, .old-tweet
+  const renderTweets = function(tweetDatas) {
     const oldTweetContainer = $('.old-tweet');
     oldTweetContainer.empty();
   
@@ -74,8 +78,9 @@ $(() => {
       const tweet = createTweetElement(tweetData);
       oldTweetContainer.prepend(tweet);
     }
-  }
+  };
 
+  //Function that validate new tweet length then POST to data storage, /tweets
   const $form = $('.chat-area');
 
   $form.on('submit', function(event) {
@@ -85,24 +90,20 @@ $(() => {
     const $message = $("textarea").val();
     const $errorSign = $('<i>').addClass("fas fa-exclamation-triangle");
     $('.error-message').empty();
-    if ($message === null || $message === ""){
+    if ($message === null || $message === "") {
       const $errorText1 = $('<div>').text("Error: Please enter a tweet!");
-      $(".error-message").append($errorSign, $errorText1).slideDown(2000).slideUp(4000);
+      $(".error-message").append($errorSign, $errorText1).slideDown(2500).slideUp(4000);
     }
-    else if ($message.length > 140){
+    else if ($message.length > 140) {
       const $errorText2 = $('<div>').text("Error: Your tweet is more than 140 letters!");
-      $(".error-message").append($errorSign, $errorText2).slideDown(2000).slideUp(4000);
+      $(".error-message").append($errorSign, $errorText2).slideDown(2500).slideUp(4000);
     }
     else {
       $.post('/tweets', serializeData, (response) => {
-        loadTweets()
-      })
+        loadTweets();
+      });
     }
-    
-    
-    
-  })
-
-})
+  });
+});
 
 

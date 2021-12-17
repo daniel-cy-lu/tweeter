@@ -1,3 +1,5 @@
+// Function that count the remaining letters in the chat box using jQuery
+
 $(() => {
   $('textarea').keyup(function() {
     
@@ -11,13 +13,8 @@ $(() => {
       remaining.css('color', 'black');
     }
     remaining.text(remainingNum);
-    
   });
-
- 
-    
-
-}) 
+});
 
 
 
