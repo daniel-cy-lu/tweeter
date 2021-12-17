@@ -18,8 +18,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
-!["Screenshot of entering new tweets"] (https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_chat.png?raw=true)
-!["Screenshot of selector shadow when hovering over icons"] (https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_selector_shadow.png?raw=true)
-!["Screenshot of an error message prompting user not to tweet an empty line"] (https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_short_text_error.png?raw=true)
-!["Screenshot of a warning when a new tweet has too many letters"] (https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_long_text_warning.png?raw=true)
-!["Screenshot of adjustment when width is narrower"] (https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_narrow_dimension_adjustment.png?raw=true)
+!["Screenshot of entering new tweets"](https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_chat.png?raw=true)
+!["Screenshot of selector shadow when hovering over icons"](https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_selector_shadow.png?raw=true)
+!["Screenshot of an error message prompting user not to tweet an empty line"](https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_short_text_error.png?raw=true)
+!["Screenshot of a warning when a new tweet has too many letters"](https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_long_text_warning.png?raw=true)
+!["Screenshot of adjustment when width is narrower"](https://github.com/daniel-cy-lu/tweeter/blob/master/docs/tweet_box_narrow_dimension_adjustment.png?raw=true)
